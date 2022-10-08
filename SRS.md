@@ -80,11 +80,12 @@ Each action through application must not cause a delay greater than 0.5 seconds 
 ### 4.2 Security Requirements
 For security reasons, each time the application is launched again, it must be in the initial state and not save the results of the previous session.
 
-
 ## Appendix A: Glossary
-
 1. **FS** - A functional specification in systems engineering and software development is a document that specifies the functions that a system or component must perform.
 2. **IEEE** - The Institute of Electrical and Electronics Engineers Standards Association (IEEE SA) is an operating unit within IEEE that develops global standards in a broad range of industries.
 3. **Markdown** - a lightweight markup language for creating formatted text using a plain-text editor. 
 4. **MVP** - Minimum Viable Product - a prototype of a product, such as a software app or video game, that includes functional versions of key elements that are planned for inclusion in the final product, and that is shared with a small audience whose feedback is used to inform and direct further product development.
 5. **SRS** - Software Requirements Specification - a document of a software system to be developed.
+
+## References
+* Functional Specification for "Asteroids - NeoWs info" -[https://github.com/ildun/Asteroids---NeoWs-info/blob/main/FS.md](https://github.com/ildun/Asteroids---NeoWs-info/blob/main/FS.md)
