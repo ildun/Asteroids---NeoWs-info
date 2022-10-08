@@ -71,7 +71,7 @@ Retrieve a list of Asteroids based on their closest approach date to Earth by en
 
 
 ### 3.2 Browse the overall Asteroid data-set
-Browse the overall Asteroid data-set displayed and updated by scrolling down the screen.
+Browse the overall Asteroid data-set displayed and updated by scrolling down the screen and switching pages.
 
 ## Other Nonfunctional Requirements
 ### 4.1 Performance Requirements
