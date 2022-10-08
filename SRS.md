@@ -26,7 +26,7 @@ Table of Contents
     * 4.1 [Performance Requirements](performance-requirements)
     * 4.2 [Security Requirements](security-requirements)
 * [Appendix A: Glossary](appendix-a-glossary)
-
+* [References](references)
 
 
 
@@ -65,7 +65,7 @@ The application should have all the functions to perform any valid request to ["
 
 ## System Features
 
-More Functional Specifications will be provided in the FS document.
+More Functional Specifications is provided in the Functional Specification document (see References).
 ### 3.1 Search for Asteroids based on their closest approach date to Earth
 Retrieve a list of Asteroids based on their closest approach date to Earth by entering starting date and end date for asteroid search, or only starting date or without parameters at all.
 
