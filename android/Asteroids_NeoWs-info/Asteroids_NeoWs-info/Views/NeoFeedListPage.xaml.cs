@@ -1,6 +1,8 @@
 ﻿using Asteroids_NeoWs_info.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace Asteroids_NeoWs_info.Views
@@ -16,12 +18,24 @@ namespace Asteroids_NeoWs_info.Views
 		{
 			base.OnAppearing ();
 
-			listView.ItemsSource = await App.NeoFeedManager.GetTasksAsync ();
+            //listView.ItemsSource = await App.NeoFeedManager.GetTasksAsync ();
+            List<NeoFeed> NeoFeedList = await App.NeoFeedManager.GetTasksAsync();
+            var asteroidsDictionary = NeoFeedList[0].Near_earth_objects;
+            var asteroidsLists = asteroidsDictionary.Values;
+            IEnumerable<Asteroid> AllAsteroids =new List<Asteroid>();
+            foreach (var asteroids in asteroidsLists.AsEnumerable()) {
+                AllAsteroids = AllAsteroids.Concat (asteroids);
+            }
+            listView.ItemsSource = AllAsteroids.ToList();
+            //ObservableCollection<Asteroid> asteroids = new ObservableCollection<Asteroid>();
+            //listView.ItemsSource = (await App.NeoFeedManager.GetTasksAsync()).AsEnumera; ;
+
             await DisplayAlert("Alert", "You have been alerted", "OK");
         }
 
 		async void OnAddItemClicked (object sender, EventArgs e)
 		{
+            
 			//NeoFeed neoFeed = (NeoFeed)sender;
             //await DisplayAlert("neoFeed", "neoFeed", "OK");
             /*

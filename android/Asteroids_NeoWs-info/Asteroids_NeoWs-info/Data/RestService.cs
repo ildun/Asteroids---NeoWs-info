@@ -34,7 +34,7 @@ namespace Asteroids_NeoWs_info.Data
 
             //Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
             string apiKey = Secrets.API__KEY;
-            Uri uri = new Uri(string.Format(Constants.RestUrl, "?start_date=2022-10-09&end_date=2022-10-09&api_key=" + apiKey));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, "?start_date=2022-10-02&end_date=2022-10-09&api_key=" + apiKey));
             try
             {
                 HttpResponseMessage response = await client.GetAsync(uri);
