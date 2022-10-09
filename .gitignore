@@ -348,3 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+/android/Asteroids_NeoWs-info/Asteroids_NeoWs-info/Data/Secrets.cs
