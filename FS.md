@@ -46,7 +46,7 @@ When an application is opened, it should always be in the initial state and runn
 
 ### 3.2 Tab 1: Search for Asteroids based on their closest approach date to Earth
 This activity will contain two optional input fields and a request-sending button. The response will be displayed in the same activity below the button.
-Users can input the **sart date** parameter and **end date** parameter or input only the **sart date** parameter or request without input at all (in that case it should be a request for most updated information). If the user will input only the **sart date** parameter, then the **end date** parameter will be automatically set to 7 days after **sart date**.
+Users can input the **start date** parameter and **end date** parameter or input only the **start date** parameter or request without input at all (in that case it should be a request for most updated information). If the user will input only the **start date** parameter, then the **end date** parameter will be automatically set to 7 days after **start date**.
 ### 3.3 Tab 2: Browse the overall Asteroid data-set
 This activity will contain two buttons (<kbd>Previous</kbd> and <kbd>Next</kbd>) to switch pages of overall Asteroid data-set. 
   
