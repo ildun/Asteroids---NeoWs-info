@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Asteroids_NeoWs_info.Models
 {
-    public class NeoFeed
+    public class NeoFeedData
     {
         [JsonProperty("links")]
         public Links Links_m { get; set; }

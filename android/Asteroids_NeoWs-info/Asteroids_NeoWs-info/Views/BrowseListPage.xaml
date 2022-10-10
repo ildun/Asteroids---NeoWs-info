@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Asteroids_NeoWs_info.Views.NeoFeedListPage"
-             Title="NeoFeed">
+             x:Class="Asteroids_NeoWs_info.Views.BrowseListPage"
+             Title="Browse">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Edit" Clicked="OnEditItemClicked">
+        <ToolbarItem Text="Go" Clicked="OnGoItemClicked">
         </ToolbarItem>
-        <ToolbarItem Text="Send" Clicked="OnSendItemClicked">
+        <ToolbarItem Text="Prev" Clicked="OnPrevItemClicked">
+        </ToolbarItem>
+        <ToolbarItem Text="Next" Clicked="OnNextItemClicked">
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView" 
@@ -30,14 +32,13 @@
                             <Label Text="{Binding Is_potentially_hazardous_asteroid}" TextColor="Gray"></Label>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                                <Label Text="It is sentry object: "></Label>
+                            <Label Text="It is sentry object: "></Label>
                             <Label Text="{Binding Is_sentry_object}" TextColor="Gray"></Label>
                         </StackLayout>
-    
-                        
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    
 </ContentPage>

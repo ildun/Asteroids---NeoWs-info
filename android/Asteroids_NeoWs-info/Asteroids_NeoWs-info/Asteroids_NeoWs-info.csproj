@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\NeoFeedItemPage.xaml.cs">
-      <DependentUpon>NeoFeedItemPage.xaml</DependentUpon>
+    <Compile Update="Views\BrowseListPage.xaml.cs">
+      <DependentUpon>BrowseListPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\NeoFeedListPage.xaml.cs">
       <DependentUpon>NeoFeedListPage.xaml</DependentUpon>
@@ -21,11 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\NeoFeedItemPage.xaml">
+    <EmbeddedResource Update="Views\BrowseListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NeoFeedListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

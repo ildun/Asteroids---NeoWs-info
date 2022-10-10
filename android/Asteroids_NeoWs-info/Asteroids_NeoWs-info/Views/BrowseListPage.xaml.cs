@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace Asteroids_NeoWs_info.Views
 {
-    public partial class NeoFeedListPage : ContentPage
+    public partial class BrowseListPage : ContentPage
 	{
-        public NeoFeedListPage()
+        public BrowseListPage()
 		{
 			InitializeComponent ();
 		}
@@ -18,6 +18,7 @@ namespace Asteroids_NeoWs_info.Views
 		protected async override void OnAppearing ()
 		{
 			base.OnAppearing ();
+            UpdateItemSource();
         }
 
         async void OnEditItemClicked(object sender, EventArgs e)
@@ -37,17 +38,26 @@ namespace Asteroids_NeoWs_info.Views
         }
         async void OnSendItemClicked(object sender, EventArgs e)
 		{
-            List<NeoFeedData> NeoFeedList = await App.NeoFeedManager.GetTasksAsync();
-            var asteroidsDictionary = NeoFeedList[0].Near_earth_objects;
-            var asteroidsLists = asteroidsDictionary.Values;
-            IEnumerable<Asteroid> AllAsteroids = new List<Asteroid>();
-            foreach (var asteroids in asteroidsLists.AsEnumerable())
-            {
-                AllAsteroids = AllAsteroids.Concat(asteroids);
-            }
-            listView.ItemsSource = AllAsteroids.ToList();
+            List<BrowseData> BrowseDataList = await App.BrowseManager.GetTasksAsync();
+            var asteroidsForBrowse = BrowseDataList[0].Near_earth_objects;
+            listView.ItemsSource = asteroidsForBrowse;
         }
 
+        async void UpdateItemSource()
+        {
+            List<BrowseData> BrowseDataList = await App.BrowseManager.GetTasksAsync();
+            var asteroidsForBrowse = BrowseDataList[0].Near_earth_objects;
+            listView.ItemsSource = asteroidsForBrowse;
+        }
+        async void OnGoItemClicked(object sender, EventArgs e)
+        {
+        }
+        async void OnPrevItemClicked(object sender, EventArgs e)
+        {
+        }
+        async void OnNextItemClicked(object sender, EventArgs e)
+        {
+        }
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             
