@@ -45,8 +45,8 @@ The history of the last requests to NASA API is not important and may not be imp
 When an application is opened, it should always be in the initial state and running activity, that asks for parameters for the request to search for Asteroids based on their closest approach date to the Earth. But the user does not have to execute this request specifically, he can switch to the next tab to execute another request for browsing the overall NASA Asteroid data set.
 
 ### 3.2 Tab 1: Search for Asteroids based on their closest approach date to Earth
-This activity will contain two buttons: one for edit parameters and one for sending a request. The response will be displayed in the same activity below the buttons.
-Users can input the **start date** parameter and **end date** parameter or input only the **start date** parameter or request without input at all (in that case it should be a request for most updated information). If the user will input only the **start date** parameter, then the **end date** parameter will be automatically set to 7 days after **start date**.
+This activity will contain two buttons: one for editing parameters and one for sending a request. The response will be displayed in the same activity below the buttons.
+Users can input the **start date** parameter and **end date** parameter or input only the **start date** parameter or request without input at all (in that case it should be a request for most updated information). If the user will input only the **start date** parameter, then the **end date** parameter will be automatically set to 7 days after the **start date**.
 
 The possible user interface is shown in the next picture:
 
@@ -56,7 +56,7 @@ The possible user interface is shown in the next picture:
   
 
 ### 3.3 Tab 2: Browse the overall Asteroid data-set
-This activity will contain two buttons (**GO**, **PREV** and **Next**) to switch pages of overall Asteroid data-set. 
+This activity will contain two buttons (**GO**, **PREV**, and **NEXT**) to switch pages of the overall Asteroid data set. 
 The possible user interface is shown in the next picture:
 
 <p align="center">
