@@ -56,7 +56,7 @@ The possible user interface is shown in the next picture:
   
 
 ### 3.3 Tab 2: Browse the overall Asteroid data-set
-This activity will contain two buttons (**GO**, **PREV**, and **Next**) to switch pages of the overall Asteroid data set. 
+This activity will contain two buttons (**GO**, **PREV**, and **NEXT**) to switch pages of the overall Asteroid data set. 
 The possible user interface is shown in the next picture:
 
 <p align="center">
