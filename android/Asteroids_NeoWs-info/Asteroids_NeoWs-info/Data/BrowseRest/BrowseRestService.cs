@@ -14,11 +14,15 @@ namespace Data.BrowseRest
     {
         HttpClient client;
 
-        private static string pageParam = "0";
+        private static int pageParam = 0;
         private const string sizeParam = "10";
-        public static void UpdatePageParameter(string startDate)
+        public static void UpdatePageParameter(int startDate)
         {
             pageParam = startDate;
+        }
+        public static int GetPageParameter()
+        {
+            return pageParam;
         }
         public List<BrowseData> BrowseField { get; private set; }
 
@@ -26,6 +30,7 @@ namespace Data.BrowseRest
         {
             client = new HttpClient();
         }
+
 
         public async Task<List<BrowseData>> RefreshDataAsync()
         {

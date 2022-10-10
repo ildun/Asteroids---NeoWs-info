@@ -21,27 +21,6 @@ namespace Asteroids_NeoWs_info.Views
             UpdateItemSource();
         }
 
-        async void OnEditItemClicked(object sender, EventArgs e)
-        {
-            string action = await DisplayActionSheet("Edit parameter:", "Cancel", null, "start date", "end date");
-            switch (action)
-            {
-                case "Cancel":
-                    return;
-                case "start date":
-                    NeoFeedRestService.UpdateStartDateParameter( await DisplayPromptAsync("Start date for request", "Expected format (yyyy-mm-dd)"));
-                    return;
-                case "end date":
-                    NeoFeedRestService.UpdateEndDateParameter( await DisplayPromptAsync("End date for request", "Expected format (yyyy-mm-dd)"));
-                    return;
-            }
-        }
-        async void OnSendItemClicked(object sender, EventArgs e)
-		{
-            List<BrowseData> BrowseDataList = await App.BrowseManager.GetTasksAsync();
-            var asteroidsForBrowse = BrowseDataList[0].Near_earth_objects;
-            listView.ItemsSource = asteroidsForBrowse;
-        }
 
         async void UpdateItemSource()
         {
@@ -51,12 +30,40 @@ namespace Asteroids_NeoWs_info.Views
         }
         async void OnGoItemClicked(object sender, EventArgs e)
         {
+            int page;
+            try
+            {
+                page = int.Parse(await DisplayPromptAsync("Page number", "Expected format: positive integer")) - 1;
+            } catch (Exception ex)
+            {
+                await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("An error occured.", ex.Message, "OK");
+                return;
+            }
+            if (page < 0)
+            {
+                await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("An error occured.", "Page number cannot be less then 1.", "OK");
+                return;
+            }
+            BrowseRestService.UpdatePageParameter(page);
+            UpdateItemSource();
         }
         async void OnPrevItemClicked(object sender, EventArgs e)
         {
+            if(BrowseRestService.GetPageParameter() <= 0)
+            {
+                await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Alert", "You are already on the first page", "OK");
+                BrowseRestService.UpdatePageParameter(0);
+            }
+            else
+            {
+                BrowseRestService.UpdatePageParameter(BrowseRestService.GetPageParameter()-1);
+            }
+            UpdateItemSource();
         }
         async void OnNextItemClicked(object sender, EventArgs e)
         {
+            BrowseRestService.UpdatePageParameter(BrowseRestService.GetPageParameter() + 1);
+            UpdateItemSource();
         }
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
