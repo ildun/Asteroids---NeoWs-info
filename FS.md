@@ -42,7 +42,12 @@ The history of the last requests to NASA API is not important and may not be imp
 
 ## 3. Architecture Overview
 ### 3.1 Work Flow
-When an application is opened, it should always be in the initial state and running activity, that asks for parameters for the request to search for Asteroids based on their closest approach date to the Earth. But the user does not have to execute this request specifically, he can switch to the next tab to execute another request for browsing the overall NASA Asteroid data set.
+When an application is opened, it should always be in the initial state and running NeoFeed activity, that has functions for input parameters for the request to search for Asteroids based on their closest approach date to the Earth. But the user does not have to execute this request specifically, he can switch to the next tab to execute another request for browsing the overall NASA Asteroid data set.
+The data flow is shown in the next picture:
+
+<p align="center">
+  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/9eaf600efee4e6cbb010a61ab517788626da4bc3/InformationFlow.jpg" style="width:200px;" />
+</p>
 
 ### 3.2 Tab 1: Search for Asteroids based on their closest approach date to Earth
 This activity will contain two buttons: one for editing parameters and one for sending a request. The response will be displayed in the same activity below the buttons.
@@ -51,16 +56,16 @@ Users can input the **start date** parameter and **end date** parameter or input
 The possible user interface is shown in the next picture:
 
 <p align="center">
-  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/a18605aed6c96f6338e59e17aba7bc72f02bdf8f/NeoFeed_UIexample.jpg" />
+  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/a18605aed6c96f6338e59e17aba7bc72f02bdf8f/NeoFeed_UIexample.jpg" style="width:200px;" />
 </p>
   
 
 ### 3.3 Tab 2: Browse the overall Asteroid data-set
-This activity will contain two buttons (**GO**, **PREV**, and **NEXT**) to switch pages of the overall Asteroid data set. 
+This activity will contain three buttons (**GO**, **PREV**, and **NEXT**) to switch pages of the overall Asteroid data set. 
 The possible user interface is shown in the next picture:
 
 <p align="center">
-  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/a18605aed6c96f6338e59e17aba7bc72f02bdf8f/Browse_UIexample.jpg" />
+  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/a18605aed6c96f6338e59e17aba7bc72f02bdf8f/Browse_UIexample.jpg" style="width:200px;"/>
 </p>
   
   
