@@ -46,7 +46,7 @@ When an application is opened, it should always be in the initial state and runn
 The data flow is shown in the next picture:
 
 <p align="center">
-  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/9eaf600efee4e6cbb010a61ab517788626da4bc3/InformationFlow.jpg" style="width:200px;" />
+  <img src="https://github.com/ildun/Asteroids---NeoWs-info/blob/9eaf600efee4e6cbb010a61ab517788626da4bc3/InformationFlow.jpg" />
 </p>
 
 ### 3.2 Tab 1: Search for Asteroids based on their closest approach date to Earth
